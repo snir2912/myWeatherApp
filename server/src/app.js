@@ -1,6 +1,9 @@
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
-const chalk = require('chalk')
+const chalk = require('chalk');
+const {
+    getMaxListeners
+} = require('process');
 const path = require('path'),
     express = require("express"),
     app = express(),
@@ -58,7 +61,9 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
         name: 'snir inbar',
-        phone: '052-6281514'
+        phone: '052-6281514',
+        email: 'snir2912@gmail.com',
+        git: "go to github!"
     })
 })
 

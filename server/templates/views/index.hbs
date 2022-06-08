@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    {{>header}}
     <div class="main-contant">
-        {{>header}}
-
+        <div class="text-contant">
         <h1>{{title}}</h1>
+        <p>Welcome to my weather app, thank you for using our service. please insert your location in the serach form and get your weaher summery.<br>enjoy!</p>
+        </div>
         <div class="form-container">
             <div class="form-wrrapper">
+                
                 <form action="">
                     <input placeholder="location">
                     <button>serach</button>
