@@ -59,7 +59,7 @@ app.get('/weather', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About',
+        title: 'About me',
         name: 'snir inbar',
         phone: '052-6281514',
         email: 'snir2912@gmail.com',
@@ -70,7 +70,7 @@ app.get('/about', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        msg: 'sorry we cant find yout page :('
+        msg: "sorry we can't find your page :("
     })
 })
 
