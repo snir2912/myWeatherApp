@@ -10,16 +10,16 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const address = search.value
 
-    fetch('http://34.204.205.165:4000//weather/?address=' + address).then((response) => {
+    fetch('http://34.204.205.165:4000/weather/?address=' + address).then((response) => {
         if (!address) {
             alert('please insert an address');
         }
         response.json().then((data) => {
             if (data.error) {
-                console.log(data.error);
+                alert(data.error);
             } else {
-                messageOne.textContent = JSON.stringify(data.location);
-                messageTwo.textContent = JSON.stringify(data.summery);
+                messageOne.textContent = data.location;
+                messageTwo.textContent = data.summery;
             }
         })
     })
