@@ -18,8 +18,8 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 console.log(data.error);
             } else {
-                messageOne.textContent = JSON.parse(data.location);
-                messageTwo.textContent = JSON.parse(data.summery);
+                messageOne.textContent = JSON.stringify(data.location);
+                messageTwo.textContent = JSON.stringify(data.summery);
             }
         })
     })
