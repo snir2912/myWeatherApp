@@ -1,6 +1,5 @@
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
-const chalk = require('chalk');
 const {
     getMaxListeners
 } = require('process');
