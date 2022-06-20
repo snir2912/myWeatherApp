@@ -58,7 +58,7 @@ app.get('/weather', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About me',
+        title: 'About',
         name: 'snir inbar',
         phone: '052-6281514',
         email: 'snir2912@gmail.com',
