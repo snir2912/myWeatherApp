@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     fetch('http://34.204.205.165:4000/weather/?address=' + address).then((response) => {
         if (!address) {
-            alert('please insert an address');
+            messageThree.textContent = "pleace insert your location";
         }
         response.json().then((data) => {
             if (data.error) {
