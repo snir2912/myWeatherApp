@@ -12,8 +12,7 @@ const forecast = (latitude, longitude, callback) => {
             } else if (response.body.error) {
                 callback('unable to fined your locattion', undefined)
             } else {
-                let msg = `<p>the sky today is: <strong>${response.body.current.weather_descriptions}</strong></p><p>the current temperasture is: <strong>${response.body.current.temperature}°</strong></p><p>its feels like: <strong>${response.body.current.feelslike}°</strong></p><p>chance of rain: <strong>${response.body.current.precip}%</strong></p>`
-                callback(undefined, msg)
+                callback(undefined, `<p>the sky today is: <strong>${response.body.current.weather_descriptions}</strong></p><p>the current temperasture is: <strong>${response.body.current.temperature}°</strong></p><p>its feels like: <strong>${response.body.current.feelslike}°</strong></p><p>chance of rain: <strong>${response.body.current.precip}%</strong></p>`)
             }
         })
     }
