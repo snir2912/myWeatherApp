@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (response.body.error) {
             callback('unable to fined your locattion', undefined)
         } else {
-            callback(undefined, 'today is: ' + response.body.current.weather_descriptions + ',' + ' the current temperasture is: ' + response.body.current.temperature + '° and its feels like: ' + response.body.current.feelslike + '°')
+            callback(undefined, 'today is: ' + response.body.current.weather_descriptions + response.body.current.weather_icons + ',' + ' the current temperasture is: ' + response.body.current.temperature + '° and its feels like: ' + response.body.current.feelslike + '°')
         }
     })
 }
